@@ -43,3 +43,5 @@ gameReset.addEventListener("click", function () {
     teamTwoGoals.innerHTML = 0;
     resetCount.innerHTML = newResetCount;
 })
+
+ccc
