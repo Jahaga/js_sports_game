@@ -38,6 +38,8 @@ teamTwoShoot.addEventListener("click", function () {
     }
 
     teamTwoShots.innerHTML = newTeamTwoShots;
+
+    playAudio(shootAudio);
 })
 
 gameReset.addEventListener("click", function () {
