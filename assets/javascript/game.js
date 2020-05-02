@@ -12,6 +12,10 @@ let teamTwoGoals = document.querySelector("#teamtwo-numgoals")
 let gameReset = document.querySelector("#reset-button")
 let resetCount = document.querySelector("#num-resets")
 
+// * Audio declaration * //
+
+var shootAudio = "assets/audio/RIP.mp3"
+
 teamOneShoot.addEventListener("click", function () {
     let newTeamOneShots = Number(teamOneShots.innerHTML) + 1;
     let x = Math.floor(Math.random() * 10);
@@ -21,6 +25,8 @@ teamOneShoot.addEventListener("click", function () {
     }
 
     teamOneShots.innerHTML = newTeamOneShots;
+
+    playAudio(shootAudio);
 })
 
 teamTwoShoot.addEventListener("click", function () {
@@ -44,4 +50,6 @@ gameReset.addEventListener("click", function () {
     resetCount.innerHTML = newResetCount;
 })
 
-ccc
+function playAudio(url) {
+    new Audio(url).play();
+}
